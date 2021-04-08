@@ -1,0 +1,3 @@
+[build]
+    pubhlish = "dist"
+    command = "npm run deploy-netlify"
