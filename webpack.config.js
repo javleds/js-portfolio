@@ -7,7 +7,8 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'main.js'
+        filename: 'main.js',
+        assetModuleFilename: 'assets/images/[hash][ext][query]'
     },
     resolve: {
         extensions: ['.js']
@@ -27,6 +28,10 @@ module.exports = {
                     MiniCssExtractConfig.loader,
                     'css-loader'
                 ]
+            },
+            {
+                test: /.png/,
+                type: 'asset/resource'
             }
         ]
     },
